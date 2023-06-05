@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import {IoAddOutline} from 'react-icons/io5'
 import StyleSheet from './initialTask.module.css'
 import { useState } from "react";
-import { EditOpenBox } from "../editOpenBox/editOpenBox";
+import { SecondStepTaskComp } from "../secondStep/secondStepTask";
 
 
 export function InitialTask(){
@@ -16,7 +16,7 @@ export function InitialTask(){
     return(
         <Fragment>
              {showEditBox ? (
-                      <EditOpenBox />
+                      <SecondStepTaskComp />
 
                     ) : (
                         <div className={StyleSheet.initialBox} onClick={handleInitialTaskClick}>

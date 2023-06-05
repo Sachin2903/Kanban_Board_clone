@@ -1,9 +1,9 @@
 import React from 'react'
 import { Fragment } from "react";
 import {RxCross1} from 'react-icons/rx'
-import StyleSheet from './editOpenBox.module.css'
+import StyleSheet from './stepTask.module.css'
 
-export function EditOpenBox()  {
+export function SecondStepTaskComp()  {
   return (
     <Fragment>
          <div className={StyleSheet.initialBox}>
