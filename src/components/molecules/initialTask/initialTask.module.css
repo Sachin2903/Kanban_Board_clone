@@ -1,0 +1,18 @@
+.initialBox{
+    display: flex;
+    width: 15rem;
+    height:3rem;
+    margin-left: 0.63rem;
+  
+    align-items: center;
+    border:2px solid gray;
+    padding-left: 1.25rem;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+
+.initialBox:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
