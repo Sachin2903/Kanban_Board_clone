@@ -1,0 +1,76 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    background: transparent;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-left: 30px;
+}
+
+.leftLogo {
+    height: 30px;
+    width: 30px;
+    font-weight: bold;
+}
+
+.leftImage{
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.leftH1 {
+    font-size: 18px;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-right: 50px;
+}
+
+.rightUl{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.rightLi{
+    font-size: 18px;
+}
+
+.rightLi:hover {
+    background-color: blue;
+    padding: 6px 10px 6px 10px;
+    color: white;
+    transition: 1s;
+    border-radius: 40px;
+}
+
+
+.rightImg{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media  (max-width: 560px) {
+    .left {
+        margin-right: 20px;
+    }
+}
