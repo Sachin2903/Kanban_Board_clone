@@ -1,0 +1,42 @@
+.initialBox {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-height: 4rem;
+    margin-left: 0.63rem;
+    background-color:whitesmoke;
+    border-radius: 0.63rem;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  
+  input {
+    width: 80%;
+    margin-left: -1rem;
+    border: 2px solid lightskyblue;
+    background-color: transparent;
+    
+  }
+  
+  .bottom {
+    display: flex;
+     padding: 0.63rem;
+  }
+  
+  .addButton {
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    cursor: pointer;
+    width: 4rem;
+    border: none;
+  }
+  
+  .crossIcon {
+    color: gray;
+    cursor: pointer;
+    margin-top: 0.13rem;
+    margin-left: 0.25rem;
+  }
+  
