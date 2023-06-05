@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 90px;
+    height: 80px;
     background: transparent;
+    background-color: white;
 }
 
 .left {
@@ -18,7 +19,7 @@
 .leftLogo {
     height: 30px;
     width: 30px;
-    font-weight: bold;
+   
 }
 
 .leftImage{
@@ -29,7 +30,7 @@
 }
 
 .leftH1 {
-    font-size: 18px;
+    font-size: 21px;
 }
 
 .right{
@@ -49,21 +50,22 @@
 }
 
 .rightLi{
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .rightLi:hover {
-    background-color: blue;
+    background:linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180));
     padding: 6px 10px 6px 10px;
     color: white;
-    transition: 1s;
+    transition: 0.5s;
     border-radius: 40px;
 }
 
 
 .rightImg{
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     border-radius: 50px;
     background-size: cover;
     background-position: center;
