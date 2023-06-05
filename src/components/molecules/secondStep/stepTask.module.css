@@ -3,7 +3,8 @@
     flex-direction: column;
     width: 200px;
     min-height: 4rem;
-    margin-left: 0.63rem;
+    margin:35px;
+  
     background-color:whitesmoke;
     border-radius: 0.63rem;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);

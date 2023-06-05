@@ -20,8 +20,8 @@ export function InitialTask(){
 
                     ) : (
                         <div className={StyleSheet.initialBox} onClick={handleInitialTaskClick}>
-                        <IoAddOutline />
-                        <p>Add a list</p>
+                        <IoAddOutline style={{color:"white"}} />
+                        <p className={StyleSheet.taskText}>Add a list</p>
                     </div> 
                     )}
             
