@@ -16,13 +16,13 @@
 
 
 
-### Libraries used in this project:
+## Libraries used in this project:
 1. Redux
 2. Material UI
 3. React Icons 
 4. Router
 
-### Collaborators:
+## Collaborators:
 1. Sachin Chaturvedi https://github.com/Sachin2903
 2. Apoorva somani https://github.com/apurva999
 3. Shadman khan https://github.com/ShadmanKhan007
