@@ -3,7 +3,11 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>
+    <h1>Hello world</h1>
+ <p>this is  kanban app</p>
+    </div>
+   
   )
 }
 
