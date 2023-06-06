@@ -2,25 +2,101 @@
     width: 100vw;
     height: 100vh;
     background:linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180));
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    height: 80px;
 }
 .mainPageDivNavBar{
    
     width: 100%;
     height: 80px;
+    cursor: pointer;
+    background-color: white;
 }
+
+.LeftNavbar{
+    display: flex;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftImage {
+ height: 30px;
+ width: 30px;
+ border-radius: 10px;
+}
+
+.leftH1{
+ margin-left: 10px;
+ font-size: 20px;
+ color: rgb(19, 156, 211);
+}
+
 .mainPageContent{
     height: 70%;
     width:100%;
+}
+
+.RightNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.RightNavbarUl{
+    display: flex;
+    font-weight: 600;
+}
+
+.RightNavbarLi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    transition: all  0.3s ease-in-out;
+}
+
+.RightNavbarLi:hover {
+    transform: rotate(8deg);
+    background:linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180));
+}
+
+.RightNavbarP {
+    background: rgb(155,251,63);
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all  0.3s ease-in-out;
+}
+.RightNavbarP:hover {
+    transform: rotate(8deg);
+}
+
+.mainPageContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 25px;
     color: white;
+}
+   
     
                                             
-}
+
 
 .para{
     line-height: 2.3rem;
