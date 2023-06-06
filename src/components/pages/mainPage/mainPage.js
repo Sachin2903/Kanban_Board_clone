@@ -6,6 +6,9 @@ export function MainPage() {
         <Fragment>
             <div className={styles.mainPageDiv}>
                 <div className={styles.mainPageDivNavBar}>
+
+                    
+
     //khan
                 </div>
 
