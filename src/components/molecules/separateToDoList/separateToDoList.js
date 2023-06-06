@@ -1,23 +1,26 @@
 import { Fragment } from "react";
-import {FiMove} from "react-icons/fi";
-import {HiDotsCircleHorizontal} from "react-icons/hi"
+import { FiMove } from "react-icons/fi";
+import { HiDotsCircleHorizontal } from "react-icons/hi";
+import { TbTrashOff } from "react-icons/tb"
 import styles from "./seperateToDoList.module.css";
-import { subToDoList } from "./subToDoList/subToDoList";
-export function SeparateToDoList(){
-    return(
+import { SubToDoList } from "./subToDoList/subToDoList";
+export function SeparateToDoList() {
+
+
+
+    return (
         <Fragment>
             <div className={styles.TodoList}>
 
-                <input className={styles.ToDolistInput}/>
-                <HiDotsCircleHorizontal className={styles.Delete}/>
+                <input className={styles.ToDolistInput} />
 
-                <FiMove className={styles.moveArrow}/>
+                <div className={styles.deleteBox}>
+                    <TbTrashOff className={styles.trashIcon} />
+                </div>
 
-
-
-                <subToDoList/>
-
-
+                <HiDotsCircleHorizontal className={styles.Delete} />
+                <FiMove className={styles.moveArrow} />
+                <SubToDoList />
             </div>
 
         </Fragment>

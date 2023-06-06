@@ -4,13 +4,30 @@
     border-radius: 15px;
     min-width: 330px;
     width:330px;
-   min-height: 250px;
-   max-height: 70%;
+   min-height: 100px;
+   max-height: 80%;
    overflow-y: auto;
    padding:30px;
-   
+   box-shadow: 0 4px 3px black;
     background-color: rgb(241, 239, 239);
 
+}
+.deleteBox{
+    cursor: pointer;
+    position: absolute;
+    top:10px;
+    right:34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 29px;
+    background-color: rgb(208, 183, 183);
+    width:35px;
+    height: 40px;
+    border-radius: 10px;
+}
+.trashIcon{
+    color: red;
 }
 .aaa{
     margin-top: 10px;

@@ -71,6 +71,7 @@
 
 .RightNavbarLi:hover {
     transform: rotate(8deg);
+    color:white;
     background:linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180));
 }
 

@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 
 
-export function subToDoList(){
+export function SubToDoList(){
     return(
         <Fragment>
           
