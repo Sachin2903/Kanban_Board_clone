@@ -14,7 +14,12 @@ export function HeroPage(){
 
                 
 
-             <InitialTask/>
+                <div className={styles.bottomBox}>
+                <InitialTask/>
+
+                </div>
+
+            
 
              <EditOpenBox/>
 
