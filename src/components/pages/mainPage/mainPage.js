@@ -9,12 +9,12 @@ export function MainPage() {
 
                     
 
-    //khan
+  
                 </div>
 
 
                 <div className={styles.mainPageContent}>
-                    //ap
+                
 
                 </div>
 

@@ -14,10 +14,10 @@ export function HeroPage(){
 
                 
 
-                <div className={styles.bottomBox}>
+               
                 <InitialTask/>
 
-                </div>
+              
 
             
 
