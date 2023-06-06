@@ -13,7 +13,9 @@ export function SeparateToDoList(){
 
                 <FiMove className={styles.moveArrow}/>
 
-          <subToDoList/>
+
+
+                <subToDoList/>
 
 
             </div>
