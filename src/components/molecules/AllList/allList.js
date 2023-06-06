@@ -1,0 +1,52 @@
+import styles from "./allList.module.css";
+import React from "react";
+import { Fragment,useRef } from "react";
+import { HiPencil } from "react-icons/hi";
+import { RxCross2 } from "react-icons/rx";
+import { useDispatch } from "react-redux";
+import {websiteTodoSlice} from "../../../slice/websiteTodoSlice"
+export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
+ const inputChangeMinNameRef=useRef();
+   const dispatchForMinList=useDispatch();
+ function deleteMinListFun(){
+   dispatchForMinList(websiteTodoSlice.actions.deleteMinList({mainId:idForMain,idToDelete:idForMinCross}))
+
+ }
+ function changeMinTitleFun(){
+   dispatchForMinList(websiteTodoSlice.actions.ToogleMinList({mainId:idForMain,idToToggle:idForMinCross}))
+
+ }
+
+ function changeTitleNameFun(){
+   if(inputChangeMinNameRef.current.value.trim().length>0){
+      dispatchForMinList(websiteTodoSlice.actions.changeMinTitle({mainId:idForMain,idToToggle:idForMinCross,changeName:(inputChangeMinNameRef.current.value.trim())}))
+   }
+
+  
+ }
+
+
+   
+   return(
+     <Fragment>
+        <div className={styles.minToDoList}>
+   {
+         (toggleStatusOfMin)?(
+         <div className={styles.minTitleEdit}>
+           <input ref={inputChangeMinNameRef} className={styles.minTitleEditInput}/>
+         <button onClick={changeTitleNameFun} className={styles.minTitleEditButton}>save</button>
+
+         </div>):(<div></div>)
+        
+         }
+            <p className={styles.minToDoListMessage}>{minTitle}</p>
+             <HiPencil onClick={changeMinTitleFun} className={styles.miniToDoListIconsPencil}/>
+             <RxCross2 onClick={deleteMinListFun} className={styles.miniToDoListIconsCross}/>
+
+
+
+        </div>
+    </Fragment>
+   )
+
+}

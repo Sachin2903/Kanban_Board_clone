@@ -6,7 +6,9 @@
   background-color: whitesmoke;
   border-radius: 20px;
   padding: 15px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 3px black;
+
+  margin-top:0;
 }
 
 
@@ -38,12 +40,18 @@
 
 }
 
+
 .crossIcon {
   color: black;
-  font-size: 1.3rem;
+  font-size: 20px;
   cursor: pointer;
+
   margin-left: 15px;
 }
 .addButton:hover{
   box-shadow: 0 2px 3px black;
+}
+.inputToAdd{
+  font-weight: 600;
+  font-size: 16px;
 }
