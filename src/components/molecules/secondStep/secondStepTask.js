@@ -12,7 +12,7 @@ export function SecondStepTaskComp({ statePass, setStatePass }) {
   const inputRef=useRef("");
 
   function handleInitialTaskClick() {
-   if(inputRef.current.value.length<=0){
+   if(inputRef.current.value.trim().length<=0){
         toast.error(' Add someThing !', {
       position: "top-center",
       autoClose: 2000,

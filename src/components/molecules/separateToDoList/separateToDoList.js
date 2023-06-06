@@ -37,7 +37,7 @@ export function SeparateToDoList({ titleForPlaceHolder, idOfComp, dustbinStatus 
 
         if (e.keyCode === 13) {
 
-            if (inputToDoTitle.current.value.length > 0) {
+            if (inputToDoTitle.current.value.trim().length > 0) {
                 dispatchToDo(websiteTodoSlice.actions.TitleChnageOfMainToDoList({
                     uniqueId: idOfComp,
                     changeTitle: inputToDoTitle.current.value.trim()

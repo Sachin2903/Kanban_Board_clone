@@ -17,7 +17,7 @@ export function SubToDoList({idForMin}) {
   };
 
   function addMinListFun(){
-    if(addMinRef.current.value.length>0){
+    if(addMinRef.current.value.trim().length>0){
       dispatchFromMinList(websiteTodoSlice.actions.addMinList({idMin:idForMin,minTitle:(addMinRef.current.value.trim())}))
       
       toast.success('One Added SuccessFully', {
