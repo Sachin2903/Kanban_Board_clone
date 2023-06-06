@@ -4,6 +4,8 @@ import { Fragment,useRef } from "react";
 import { HiPencil } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {websiteTodoSlice} from "../../../slice/websiteTodoSlice"
 export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
  const inputChangeMinNameRef=useRef();
@@ -20,6 +22,34 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
  function changeTitleNameFun(){
    if(inputChangeMinNameRef.current.value.trim().length>0){
       dispatchForMinList(websiteTodoSlice.actions.changeMinTitle({mainId:idForMain,idToToggle:idForMinCross,changeName:(inputChangeMinNameRef.current.value.trim())}))
+      toast.success('Successfully Changed', {
+         position: "bottom-center",
+         autoClose: 2000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: false,
+         draggable: false,
+         progress: undefined,
+         theme: "light",
+     });
+     dispatchForMinList(websiteTodoSlice.actions.ToogleMinList({mainId:idForMain,idToToggle:idForMinCross}))
+  
+  
+   }else{
+
+      toast.error(' Add someThing !', {
+         position: "top-center",
+         autoClose: 2000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: false,
+         draggable: false,
+         progress: undefined,
+         theme: "colored",
+         });
+ 
+
+
    }
 
   
@@ -46,6 +76,18 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
 
 
         </div>
+        <ToastContainer
+                    position="bottom-center"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
     </Fragment>
    )
 
