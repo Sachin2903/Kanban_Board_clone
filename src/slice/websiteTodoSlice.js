@@ -63,6 +63,7 @@ export const websiteTodoSlice = createSlice({
                    e.list=[...newMinList];
 
                  }
+                 return e;
             })
         }),
         ToogleMinList:((state,action)=>{
@@ -73,8 +74,10 @@ export const websiteTodoSlice = createSlice({
                         e.EditStatusOfMin=!e.EditStatusOfMin
 
                     }
+                    return e;
                 })
                 }
+                return e;
            })
 
         }),
@@ -87,14 +90,12 @@ export const websiteTodoSlice = createSlice({
                         e.minTaskTitle=action.payload.changeName;
 
                     }
+                    return e;
                 })
                 }
+                return e;
            })
-
-
-            
-
-        })
+        }),
 
 
 
