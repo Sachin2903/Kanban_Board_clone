@@ -10,7 +10,7 @@
     height: 80px;
 }
 .mainPageContent{
-    height: 80%;
+    height: 70%;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     font-size: 25px;
     color: white;
     
-
+                                            
 }
 
 .para{

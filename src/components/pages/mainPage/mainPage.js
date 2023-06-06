@@ -9,7 +9,7 @@ export function MainPage() {
 
                     
 
-    //khan
+  
                 </div>
 
 
