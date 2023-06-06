@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 30px;
+  min-height: 35px;
+}
+
+.buttonDiv {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 8px;
+  min-height: 35px;
+  margin-right: 100px;
+  margin: 0 2px;
+  padding: 0 16px;
+}
+
+.buttonDiv:hover {
+  background-color: rgb(230, 226, 226);
+  cursor: pointer;
+  margin: 0 2px;
+  padding: 0 16px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.inputBtn {
+  display: flex;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.btnDiv {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btnDiv input {
+  width: 256px;
+  min-height: 64px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0 1px 1px rgb(88, 87, 87);
+  border-radius: 4px;
+  padding-left: 4px;
+  margin-left: 2px;
+}
+
+.btnAdd {
+  width: 57%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.btnAdd > button {
+  padding: 8px 16px;
+  background-color: #0c66e4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnAdd > button:hover {
+  background-color: #0e53b3;
+}
+
+.icon1 {
+  margin-right: 30px;
+  font-size: 20px;
+  color: darkgrey;
+}
+
+.icon1:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.moreIcon {
+  margin-left: 80px;
+  cursor: pointer;
+}
