@@ -79,7 +79,21 @@ export const websiteTodoSlice = createSlice({
 
         }),
         changeMinTitle:((state,action)=>{
+
+            state.map((e)=>{
+                if(e.id===action.payload.mainId){
+                  e.list.map((e)=>{
+                    if(e.idMin===action.payload.idToChnageMinTitle){
+                        e.minTaskTitle=action.payload.changeName;
+
+                    }
+                })
+                }
+           })
+
+
             
+
         })
 
 

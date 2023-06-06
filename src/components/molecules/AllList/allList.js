@@ -21,7 +21,7 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
 
  function changeTitleNameFun(){
    if(inputChangeMinNameRef.current.value.trim().length>0){
-      dispatchForMinList(websiteTodoSlice.actions.changeMinTitle({mainId:idForMain,idToToggle:idForMinCross,changeName:(inputChangeMinNameRef.current.value.trim())}))
+      dispatchForMinList(websiteTodoSlice.actions.changeMinTitle({mainId:idForMain,idToChnageMinTitle:idForMinCross,changeName:(inputChangeMinNameRef.current.value.trim())}))
       toast.success('Successfully Changed', {
          position: "bottom-center",
          autoClose: 2000,
@@ -33,7 +33,7 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
          theme: "light",
      });
      dispatchForMinList(websiteTodoSlice.actions.ToogleMinList({mainId:idForMain,idToToggle:idForMinCross}))
-  
+     inputChangeMinNameRef.current.value="";
   
    }else{
 
