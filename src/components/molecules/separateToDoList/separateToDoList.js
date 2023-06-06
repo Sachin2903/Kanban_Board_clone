@@ -4,11 +4,8 @@ import { HiDotsCircleHorizontal } from "react-icons/hi";
 import { TbTrashOff } from "react-icons/tb"
 import styles from "./seperateToDoList.module.css";
 import { SubToDoList } from "./subToDoList/subToDoList";
-export function SeparateToDoList() {
-
-
-
-    return (
+export function SeparateToDoList(){
+    return(
         <Fragment>
             <div className={styles.TodoList}>
 
