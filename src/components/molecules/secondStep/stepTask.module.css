@@ -1,5 +1,6 @@
 .initialBox {
-  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
   min-height: 150px;
   height: 150px;
   margin: 35px;
