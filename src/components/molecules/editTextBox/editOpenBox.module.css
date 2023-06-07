@@ -1,86 +1,109 @@
-
-.editMainbox{
+.editMainbox {
     position: absolute;
-    top:0;
-    width:100%;
+    top: 0;
+    width: 100%;
     height: 100%;
-   display: none;
+    background-color: rgb(255, 250, 216);
     backdrop-filter: blur(1000px);
-
 }
-.editMainboxContainer{
-    width:100%;
+
+.editMainboxContainer {
+    width: 100%;
     height: 100%;
     backdrop-filter: blur(1000px);
     display: flex;
     justify-content: center;
     align-items: center;
 
-
 }
 
-.editMainboxContent{
+.editMainboxContent {
     text-align: left;
     border: 0;
     width: 600px;
     min-width: 500px;
-    height: 550px;
-    border-radius: 15px;
     min-height: 550px;
-    background-color:rgba(218, 218, 218, 0.685);
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 15px;
+    background-color: rgba(218, 218, 218, 0.685);
     padding: 25px;
+    box-shadow: 4px 5px 2px black;
 }
 
-.desText{
+.desText {
     cursor: none;
     font-weight: 600;
     display: inline;
     font-size: 23px;
-    margin:0 10px;
+    margin: 0 10px;
 }
-.desMenu{
+
+.desMenu {
     cursor: none;
-   
     font-size: 20px;
 }
-.textArea{
+
+.textArea {
     width: 100%;
-    height: 80%;
-    margin:10px;
+    height: 15%;
+    padding: 15px;
+    margin: 10px;
     border-radius: 9px;
     background-color: white;
     border: 3px solid rgb(69, 202, 255);
+    font-weight: bold;
+    font-size: 22px;
+    font-family: monospace;
+    outline: none;
 }
-.desBtnSave{
+
+.desBtnSave {
     background-color: rgb(105, 142, 253);
     color: white;
     height: 40px;
     font-size: 19px;
-    width:80px;
+    width: 80px;
     border-radius: 6px;
     border: 0;
     margin: 0 10px;
     cursor: pointer;
-           font-weight: bold;
+    font-weight: bold;
 }
-.desBtnCancel{
-   background-color: transparent;
+
+.desBtnCancel {
+    background-color: transparent;
     color: black;
     height: 40px;
     font-size: 19px;
-    width:80px;
+    width: 80px;
     border-radius: 6px;
     border: 0;
-  font-weight: bold;
-  cursor: pointer;
+    font-weight: bold;
+    cursor: pointer;
 }
-.desBtnSideText{
+
+.desBtnSideText {
     cursor: none;
     display: inline;
-    margin-left:45%;
+    margin-left: 45%;
     color: rgb(51, 101, 253);
     font-size: 16px;
     font-weight: bold;
+}
 
-   
+
+/*-----*/
+.bottomDesActivity {
+    margin-top: 20px;
+    width: 100%;
+    border: 1px solid black;
+    min-height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.DesTitle {
+    font-size: 22px;
+    margin: 10px;
 }

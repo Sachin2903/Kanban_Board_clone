@@ -10,7 +10,9 @@
     box-shadow: 0 0 5px black;
 }
 .minToDoListMessage{
-    width: 85%;
+    cursor: pointer;
+    word-break: break-all;
+    width: 60%;
     font-family: monospace;
     font-weight: 500;
     font-size: 16px;
@@ -52,7 +54,6 @@
     height: 68px;
     width:70%;
     top:-5px;
-    
 }
 
 

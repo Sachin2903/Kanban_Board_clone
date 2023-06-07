@@ -47,12 +47,12 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
          progress: undefined,
          theme: "colored",
          });
- 
-
-
    }
+ }
 
-  
+
+ function openDesActivityPage(){
+  console.log(idForMinCross,idForMain);
  }
 
 
@@ -69,7 +69,7 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
          </div>):(<div></div>)
         
          }
-            <p className={styles.minToDoListMessage}>{minTitle}</p>
+            <p onClick={openDesActivityPage} className={styles.minToDoListMessage}>{minTitle}</p>
              <HiPencil onClick={changeMinTitleFun} className={styles.miniToDoListIconsPencil}/>
              <RxCross2 onClick={deleteMinListFun} className={styles.miniToDoListIconsCross}/>
 

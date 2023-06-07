@@ -41,8 +41,7 @@ export const websiteTodoSlice = createSlice({
 
         }),
         addMinList: ((state, action) => {
-           
-            const addMinListData = {
+           const addMinListData = {
                 idMin: uuidv4(),
                 minTaskTitle: action.payload.minTitle,
                 EditStatusOfMin: false,
