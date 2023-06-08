@@ -80,6 +80,7 @@ export const websiteTodoSlice = createSlice({
                         if (e.idMin === action.payload.idToChnageMinTitle) {
                             e.minTaskTitle = action.payload.changeName;
                         }
+                        return e
                     })
                 }
                 return e;

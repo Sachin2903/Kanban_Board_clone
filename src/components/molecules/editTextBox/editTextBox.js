@@ -6,7 +6,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { useNavigate, useParams } from "react-router-dom";
 import {websiteTodoSlice} from "../../../slice/websiteTodoSlice";
-import logoimg from "../../../image/man.png"
+import logoimg from "../../../image/man.png";
+import 'react-toastify/dist/ReactToastify.css';
+
+import { ToastContainer, toast } from 'react-toastify';
 
 export function EditOpenBox() {
     const navigate = useNavigate();
@@ -32,6 +35,16 @@ export function EditOpenBox() {
   })
 
   function toSaveDesInSlice(){
+    toast.success('Please Wait it will update Soon', {
+        position: "top-center",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+    });
     Des(websiteTodoSlice.actions.addDescriptionToList({mainId:param1,minId:param2,titlefromdes:refoddes.current.value.trim()}));
     refoddes.current.value=""
   }
@@ -40,7 +53,7 @@ export function EditOpenBox() {
 
 
     function closeTextBox() {
-        navigate("/kanbanboard")
+        navigate("/kanbanboard");
     }
 
 
@@ -72,6 +85,18 @@ export function EditOpenBox() {
 
 
                 </div>
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={2000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
 
             </div>
 
