@@ -79,3 +79,10 @@
     background-color: transparent;
     
 }
+.inputHint{
+    display: none;
+    margin-left: 10px;
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+}

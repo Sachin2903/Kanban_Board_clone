@@ -25,6 +25,7 @@ export function SeparateToDoList({ titleForPlaceHolder, idOfComp, dustbinStatus 
 
     const dispatchToDo = useDispatch();
     const inputToDoTitle = useRef("");
+    const inputHintsRef=useRef();
     function changeTrashStatus(idForTrash) {
         dispatchToDo(websiteTodoSlice.actions.toggleTrash(idForTrash))
 
@@ -34,10 +35,12 @@ export function SeparateToDoList({ titleForPlaceHolder, idOfComp, dustbinStatus 
         dispatchToDo(websiteTodoSlice.actions.DeleteMyToDoList(idForAction))
     }
     function checkAndChange(e) {
+        inputHintsRef.current.style.display="block";
 
         if (e.keyCode === 13) {
 
             if (inputToDoTitle.current.value.trim().length > 0) {
+                inputHintsRef.current.style.display="none";
                 dispatchToDo(websiteTodoSlice.actions.TitleChnageOfMainToDoList({
                     uniqueId: idOfComp,
                     changeTitle: inputToDoTitle.current.value.trim()
@@ -68,6 +71,7 @@ export function SeparateToDoList({ titleForPlaceHolder, idOfComp, dustbinStatus 
             <div className={styles.TodoList}>
 
                 <input ref={inputToDoTitle} onKeyDown={checkAndChange} placeholder={titleForPlaceHolder} className={styles.ToDolistInput} />
+                <p ref={inputHintsRef} className={styles.inputHint}>Press Enter To Change</p>
                 {
                     (dustbinStatus) ? (
 
