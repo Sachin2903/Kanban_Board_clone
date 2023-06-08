@@ -14,6 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 export function EditOpenBox() {
     const navigate = useNavigate();
     const refoddes=useRef();
+    const refDesHint=useRef();
     const { param1, param2 } = useParams();
     const Des = useDispatch();
 
@@ -35,6 +36,10 @@ export function EditOpenBox() {
   })
 
   function toSaveDesInSlice(){
+    if(refoddes.current.value.trim().length>0){
+        refDesHint.current.style.display="none";
+     Des(websiteTodoSlice.actions.addDescriptionToList({mainId:param1,minId:param2,titlefromdes:refoddes.current.value.trim()}));
+    refoddes.current.value="";
     toast.success('Please Wait it will update Soon', {
         position: "top-center",
         autoClose: 4000,
@@ -45,8 +50,9 @@ export function EditOpenBox() {
         progress: undefined,
         theme: "light",
     });
-    Des(websiteTodoSlice.actions.addDescriptionToList({mainId:param1,minId:param2,titlefromdes:refoddes.current.value.trim()}));
-    refoddes.current.value=""
+    }else{
+        refDesHint.current.style.display="block";
+    }
   }
 
  
@@ -69,6 +75,7 @@ export function EditOpenBox() {
                         <p className={styles.desText}>Description</p>
                         <AiOutlineQuestionCircle className={styles.desMenu} />
                         <input ref={refoddes} className={styles.textArea} />
+                        <p ref={refDesHint} className={styles.desHintbottom}>Please Add Something</p>
 
                         <button onClick={toSaveDesInSlice} className={styles.desBtnSave}>Save</button>
 
@@ -87,7 +94,7 @@ export function EditOpenBox() {
                 </div>
                 <ToastContainer
                     position="bottom-center"
-                    autoClose={2000}
+                    autoClose={4000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick
