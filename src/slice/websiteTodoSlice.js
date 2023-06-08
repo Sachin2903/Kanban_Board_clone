@@ -11,7 +11,6 @@ export const websiteTodoSlice = createSlice({
                 list: [],
                 trashStatus: false,
             }
-
             return [...state, addedTodOListData]
         }),
         DeleteMyToDoList: ((state, action) => {
@@ -29,7 +28,6 @@ export const websiteTodoSlice = createSlice({
                 }
                 return e
             })
-
         }),
         TitleChnageOfMainToDoList: ((state, action) => {
             state.map((e) => {
@@ -38,63 +36,70 @@ export const websiteTodoSlice = createSlice({
                 }
                 return e;
             })
-
         }),
         addMinList: ((state, action) => {
-           const addMinListData = {
+            const addMinListData = {
                 idMin: uuidv4(),
                 minTaskTitle: action.payload.minTitle,
                 EditStatusOfMin: false,
+                descriptionOfList: []
             }
             state.map((e) => {
                 if (e.id === action.payload.idMin) {
-                    e.list = [...e.list,addMinListData]
-
+                    e.list = [...e.list, addMinListData]
                 }
                 return e
-
             })
         }),
-        deleteMinList:((state,action)=>{
-            state.map((e)=>{
-                 if(e.id===action.payload.mainId){
-                   const newMinList= e.list.filter((e)=>e.idMin!==action.payload.idToDelete)
-                   e.list=[...newMinList];
-
-                 }
-                 return e;
+        deleteMinList: ((state, action) => {
+            state.map((e) => {
+                if (e.id === action.payload.mainId) {
+                    const newMinList = e.list.filter((e) => e.idMin !== action.payload.idToDelete)
+                    e.list = [...newMinList];
+                }
+                return e;
             })
         }),
-        ToogleMinList:((state,action)=>{
-            state.map((e)=>{
-                if(e.id===action.payload.mainId){
-                  e.list.map((e)=>{
-                    if(e.idMin===action.payload.idToToggle){
-                        e.EditStatusOfMin=!e.EditStatusOfMin
-
-                    }
-                    return e;
-                })
+        ToogleMinList: ((state, action) => {
+            state.map((e) => {
+                if (e.id === action.payload.mainId) {
+                    e.list.map((e) => {
+                        if (e.idMin === action.payload.idToToggle) {
+                            e.EditStatusOfMin = !e.EditStatusOfMin
+                        }
+                        return e;
+                    })
                 }
                 return e;
-           })
-
+            })
         }),
-        changeMinTitle:((state,action)=>{
-
-            state.map((e)=>{
-                if(e.id===action.payload.mainId){
-                  e.list.map((e)=>{
-                    if(e.idMin===action.payload.idToChnageMinTitle){
-                        e.minTaskTitle=action.payload.changeName;
-
-                    }
-                    return e;
-                })
+        changeMinTitle: ((state, action) => {
+            state.map((e) => {
+                if (e.id === action.payload.mainId) {
+                    e.list.map((e) => {
+                        if (e.idMin === action.payload.idToChnageMinTitle) {
+                            e.minTaskTitle = action.payload.changeName;
+                        }
+                    })
                 }
                 return e;
-           })
+            })
         }),
+        addDescriptionToList: ((state, action) => {
+            state.map((e) => {
+                if (e.id === action.payload.mainId) {
+                    e.list.map((ee) => {
+                        if (ee.idMin === action.payload.minId) {
+                            const text = `${action.payload.titlefromdes}`
+                            ee.descriptionOfList = [text, ...ee.descriptionOfList];
+                        }
+                        return ee;
+                    })
+                }
+                return e;
+            })
+        }),
+
 
 
 

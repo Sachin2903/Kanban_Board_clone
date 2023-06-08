@@ -71,6 +71,10 @@
     cursor: pointer;
     font-weight: bold;
 }
+.desBtnSave:hover{
+    box-shadow: 0 2px 3px black;
+
+}
 
 .desBtnCancel {
     position: absolute;
@@ -88,7 +92,7 @@
 .desBtnSideText {
     cursor: none;
     display: inline;
-    margin-left: 58%;
+    margin-left: 55%;
     color: rgb(51, 101, 253);
     font-size: 16px;
     font-weight: bold;
@@ -100,12 +104,37 @@
     margin-top: 20px;
     width: 100%;
     border: 1px solid black;
-    min-height: 250px;
+    height: 200px;
     border-radius: 10px;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .DesTitle {
     font-size: 22px;
     margin: 10px;
+}
+.desp{
+    color:black;
+    width: 100%;
+    word-break: break-all;
+    height: auto;
+   
+
+}
+.desImg{
+   
+    height: 40px;
+    width: 40px;
+}
+.desBox{
+    
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:15px;
+    min-height:45px;
+    width: 100%;
+   
 }
