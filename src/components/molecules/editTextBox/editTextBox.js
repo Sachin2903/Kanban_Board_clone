@@ -17,8 +17,6 @@ export function EditOpenBox() {
 
     function closeTextBox() {
         navigate("/kanbanboard")
-
-
     }
 
 
