@@ -1,5 +1,6 @@
 import styles from "./allList.module.css";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Fragment,useRef } from "react";
 import { HiPencil } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
@@ -8,8 +9,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {websiteTodoSlice} from "../../../slice/websiteTodoSlice"
 export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
- const inputChangeMinNameRef=useRef();
+   const navToDes=useNavigate()
+   const inputChangeMinNameRef=useRef();
    const dispatchForMinList=useDispatch();
+
+
  function deleteMinListFun(){
    dispatchForMinList(websiteTodoSlice.actions.deleteMinList({mainId:idForMain,idToDelete:idForMinCross}))
 
@@ -52,7 +56,7 @@ export function AllList({toggleStatusOfMin,minTitle,idForMinCross,idForMain}) {
 
 
  function openDesActivityPage(){
-  console.log(idForMinCross,idForMain);
+  navToDes(`/description/${idForMain}/${idForMinCross}`)
  }
 
 

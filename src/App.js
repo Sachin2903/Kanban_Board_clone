@@ -8,7 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage/>}/>
       <Route path="/kanbanboard" element={<HeroPage/>}/>
-      <Route path="/description" element={<EditOpenBox/>}/>
+      <Route path="/description/:param1/:param2" element={<EditOpenBox/>}/>
     </Routes>
   );
 }
