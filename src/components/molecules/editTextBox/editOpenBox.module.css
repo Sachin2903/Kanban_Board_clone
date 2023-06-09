@@ -71,7 +71,8 @@
     cursor: pointer;
     font-weight: bold;
 }
-.desBtnSave:hover{
+
+.desBtnSave:hover {
     box-shadow: 0 2px 3px black;
 
 }
@@ -81,11 +82,11 @@
     background-color: transparent;
     color: black;
     font-size: 25px;
-    
+
     border-radius: 6px;
     border: 0;
-  right:15px;
-  top: 15px;
+    right: 15px;
+    top: 15px;
     cursor: pointer;
 }
 
@@ -103,7 +104,7 @@
 .bottomDesActivity {
     margin-top: 20px;
     width: 100%;
-    border: 1px solid black;
+   
     height: 200px;
     border-radius: 10px;
     padding: 20px;
@@ -111,38 +112,71 @@
 }
 
 .DesTitle {
-    font-size: 22px;
+    font-size: 17px;
     margin: 10px;
+    display: block;
+    background-color: transparent;
+    border: 0;
+    padding:15px;
 }
-.desp{
-    color:black;
+
+.desp {
+    color: black;
     width: 100%;
     word-break: break-all;
     height: auto;
-   
+
 
 }
-.desImg{
-   
+
+.desImg {
+
     height: 40px;
     width: 40px;
 }
-.desBox{
-    
+
+.desBox {
+
     margin-top: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap:15px;
-    min-height:45px;
+    gap: 15px;
+    min-height: 45px;
     width: 100%;
-   
+
 }
-.desHintbottom{
-    color :red;
+
+.desHintbottom {
+    color: red;
     font-size: 15px;
     margin-left: 20px;
     margin-bottom: 15px;
     font-weight: bold;
     display: none;
+}
+
+.bottomActivity {
+  
+    width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    margin-top: 15px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 13px;
+   
+
+}
+.actTopText{
+    font-size: 20px;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+.inputHintOnEdit{
+    display: none;
+    margin-left: 10px;
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
 }

@@ -9,7 +9,6 @@ export const websiteTodoSlice = createSlice({
                 id: uuidv4(),
                 taskTitle: action.payload,
                 list: [],
-                activitiesOfList:[],
                 trashStatus: false,
             }
             return [...state, addedTodOListData]
@@ -43,11 +42,13 @@ export const websiteTodoSlice = createSlice({
                 idMin: uuidv4(),
                 minTaskTitle: action.payload.minTitle,
                 EditStatusOfMin: false,
-                descriptionOfList: []
+                activitiesOfList:[`${action.payload.minTitle.toUpperCase()} created on ${Date().slice(0,25)}`],
+                descriptionOfList:[]
             }
             state.map((e) => {
                 if (e.id === action.payload.idMin) {
                     e.list = [...e.list, addMinListData]
+                
                 }
                 return e
             })
@@ -80,6 +81,8 @@ export const websiteTodoSlice = createSlice({
                     e.list.map((e) => {
                         if (e.idMin === action.payload.idToChnageMinTitle) {
                             e.minTaskTitle = action.payload.changeName;
+                            e.activitiesOfList=[...e.activitiesOfList,"Title changed successfully"]
+                            
                         }
                         return e
                     })

@@ -14,6 +14,8 @@ import { ToastContainer, toast } from 'react-toastify';
 export function EditOpenBox() {
     const navigate = useNavigate();
     const refoddes=useRef();
+    const inputHintsRefonEdit=useRef();
+    const inputToDoTitleonEdit=useRef();
     const refDesHint=useRef();
     const { param1, param2 } = useParams();
     const Des = useDispatch();
@@ -54,13 +56,46 @@ export function EditOpenBox() {
         refDesHint.current.style.display="block";
     }
   }
-
- 
-
-
     function closeTextBox() {
         navigate("/kanbanboard");
     }
+
+    function checkAndChange(e) {
+        inputHintsRefonEdit.current.style.display="block";
+
+        if (e.keyCode === 13) {
+
+            if (inputToDoTitleonEdit.current.value.trim().length > 0) {
+                inputHintsRefonEdit.current.style.display="none";
+
+                Des(websiteTodoSlice.actions.changeMinTitle({mainId:param1,idToChnageMinTitle:param2,changeName:(inputToDoTitleonEdit.current.value.trim())}))
+               
+                inputToDoTitleonEdit.current.value = "";
+
+
+                toast.success('Successfully Changed', {
+                    position: "bottom-center",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    progress: undefined,
+                    theme: "light",
+                });
+
+            }
+        }
+
+    }
+
+    
+
+
+
+
+
+
 
 
 
@@ -70,7 +105,8 @@ export function EditOpenBox() {
                 <div className={styles.editMainboxContainer}>
                     <div className={styles.editMainboxContent}>
                         <ImCross onClick={closeTextBox} className={styles.desBtnCancel} />
-                        <p className={styles.DesTitle}>{minData.minTaskTitle}</p>
+                        <input className={styles.DesTitle} ref={inputToDoTitleonEdit} onKeyDown={checkAndChange} placeholder={minData.minTaskTitle}/>
+                        <p ref={inputHintsRefonEdit} className={styles.inputHintOnEdit}>Press Enter To Change</p>
                         <HiMenuAlt2 className={styles.desMenu} />
                         <p className={styles.desText}>Description</p>
                         <AiOutlineQuestionCircle className={styles.desMenu} />
@@ -84,8 +120,12 @@ export function EditOpenBox() {
                             {
                                 minData.descriptionOfList.map((e,i)=> <div className={styles.desBox} key={i*10}><img className={styles.desImg} src={logoimg} alt="loading"/><p className={styles.desp}>{e}</p></div>  )
                             }
-
-
+                        </div>
+                        <div className={styles.bottomActivity}>
+                            <p className={styles.actTopText}>ALL Activity :-</p>
+                            {
+                                minData.activitiesOfList.map((e,i)=> <div className={styles.desBox} key={i*10}><img className={styles.desImg} src={logoimg} alt="loading"/><p className={styles.desp}>{e}</p></div>  )
+                            }
                         </div>
 
                     </div>
