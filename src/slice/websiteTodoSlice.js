@@ -9,6 +9,7 @@ export const websiteTodoSlice = createSlice({
                 id: uuidv4(),
                 taskTitle: action.payload,
                 list: [],
+                activitiesOfList:[],
                 trashStatus: false,
             }
             return [...state, addedTodOListData]
