@@ -41,7 +41,8 @@ export function InitialTask(){
         <Fragment>
           <div className={StyleSheet.bottomDivForList}>
            {/* map start parent*/
-           
+          
+
           arrayToBeMap.map((e,i)=>{
           
             return <SeparateToDoList titleForPlaceHolder={e.taskTitle} key={i} idOfComp={e.id} dustbinStatus={e.trashStatus}/>

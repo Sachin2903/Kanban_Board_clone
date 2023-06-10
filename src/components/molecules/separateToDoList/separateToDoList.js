@@ -83,7 +83,7 @@ export function SeparateToDoList({ titleForPlaceHolder, idOfComp, dustbinStatus 
 
                 }
 
-
+            
                 {
 
                     arrayToBeMapInsideSeprateList.map((e) =><AllList toggleStatusOfMin={e.EditStatusOfMin} minTitle={e.minTaskTitle} idForMinCross={e.idMin} idForMain={idOfComp} key={e.idMin}/>)
