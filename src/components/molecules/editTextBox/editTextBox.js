@@ -1,4 +1,4 @@
-import { Fragment ,useRef} from "react";
+import React,{ Fragment ,useRef} from "react";
 import styles from "./editOpenBox.module.css";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { ImCross } from "react-icons/im";
@@ -44,7 +44,7 @@ export function EditOpenBox() {
     refoddes.current.value="";
     toast.success('Please Wait it will update Soon', {
         position: "top-center",
-        autoClose: 4000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -75,7 +75,7 @@ export function EditOpenBox() {
 
                 toast.success('Successfully Changed', {
                     position: "bottom-center",
-                    autoClose: 2000,
+                    autoClose: 1000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: false,
@@ -134,7 +134,7 @@ export function EditOpenBox() {
                 </div>
                 <ToastContainer
                     position="bottom-center"
-                    autoClose={4000}
+                    autoClose={1000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick

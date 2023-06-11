@@ -1,28 +1,27 @@
+
+
+
 .initialBox{
     display: flex;
     min-width: 15rem;
     height:3rem;
     margin-left: 0.63rem;
-   margin: 35px;
-  
+    margin: 35px;
     align-items: center;
     border:2px solid rgb(255, 255, 255);
     padding-left: 1.25rem;
     background-color: transparent;
     border-radius: 1rem;
     margin-top: 0;
-   
     box-shadow: 0 4px 3px black;
 }
 
 .initialBox:hover{
-    
     cursor: pointer;
     transform: translateY(2px);
 }
 .taskText{
     color:white
-
 }
 .bottomDivForList{
     display: flex;
@@ -32,3 +31,7 @@
    justify-content: flex-start;
    align-items: flex-start;
 }
+.bottomSecondDivForList{
+    display: flex;
+}
+

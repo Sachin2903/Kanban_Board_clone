@@ -42,13 +42,13 @@ export const websiteTodoSlice = createSlice({
                 idMin: uuidv4(),
                 minTaskTitle: action.payload.minTitle,
                 EditStatusOfMin: false,
-                activitiesOfList:[`${action.payload.minTitle.toUpperCase()} created on ${Date().slice(0,25)}`],
-                descriptionOfList:[]
+                activitiesOfList: [`${action.payload.minTitle.toUpperCase()} created on ${Date().slice(0, 25)}`],
+                descriptionOfList: []
             }
             state.map((e) => {
                 if (e.id === action.payload.idMin) {
                     e.list = [...e.list, addMinListData]
-                
+
                 }
                 return e
             })
@@ -81,8 +81,8 @@ export const websiteTodoSlice = createSlice({
                     e.list.map((e) => {
                         if (e.idMin === action.payload.idToChnageMinTitle) {
                             e.minTaskTitle = action.payload.changeName;
-                            e.activitiesOfList=[...e.activitiesOfList,"Title changed successfully"]
-                            
+                            e.activitiesOfList = [...e.activitiesOfList, "Card Name changed successfully"]
+
                         }
                         return e
                     })
@@ -105,7 +105,41 @@ export const websiteTodoSlice = createSlice({
             })
         }),
 
+        //    reducers for DND
+        chnageInRootAndRoot: ((state, action) => {
+            const [removeFromRoot] = state.splice(action.payload.start, 1);
+            state.splice(action.payload.end, 0, removeFromRoot)
+        }),
+        changeWhenInSame: ((state, action) => {
+            const chnageIn = state.find((e) => {
+                if (e.id === action.payload.in)
+                    return true;
+                return false;
+            })
+            const [removeInRoot] = chnageIn.list.splice(action.payload.from, 1);
+            chnageIn.list.splice(action.payload.to, 0, removeInRoot)
+        }),
+        changeWhenInDifferent: ((state, action) => {
+            const changeInDiff = state.find((e) => {
+                if (e.id === action.payload.inRoot)
+                    return true;
+                return false;
+            })
+            const [removeInRoot] = changeInDiff.list.splice(action.payload.inRootIndex, 1);
+            const changeToDiff = state.find((e) => {
+                if (e.id === action.payload.toRoot)
+                    return true;
+                return false;
+            })
+            changeToDiff.list.splice(action.payload.toRootIndex, 0, removeInRoot);
+            const empty=changeToDiff.list[action.payload.toRootIndex].activitiesOfList;
+            changeToDiff.list[action.payload.toRootIndex].activitiesOfList=[...empty,`has been moved to ${changeToDiff.taskTitle}`]
 
+
+
+
+
+        })
 
 
 
