@@ -1,5 +1,9 @@
 .heroPageMain{
     width:100vw;
     min-height: 100vh;
-    background:linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
 }
+
+ 
