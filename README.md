@@ -11,19 +11,26 @@
 
 
 
+# Some Glimpses
 
-
+![Kanban_Board (2)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/a6ebdc65-6f1f-40d7-99c8-7b5219e23b07)
+![Kanban_Board (3)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/05283a28-b6a9-4447-a8d2-79cb7f777599)
+![Kanban_Board (4)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/9a3c0e63-9a01-4b2e-98f0-374fbdfcb3b8)
+![Kanban_Board (5)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/856a3093-c6b9-4493-86e3-3e3b2dd51c7e)
+![Kanban_Board (6)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/dc02df46-8d33-4582-a252-50cb45b6a663)
+![Kanban_Board (7)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/cedac882-1e94-4c2a-b805-1eb32c867c55)
+![Kanban_Board (8)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/ebfc2d41-d159-43e2-9cc1-cd55455dc826)
 
 
 
 ## others Libraries used in this project:
-1. Redux
+1. React-Redux
 2. React Beautiful DND
 3. React Icons 
-4. Router
+4. React-Router-Dom
 
 ## Collaborators:
 1. Sachin Chaturvedi https://github.com/Sachin2903
-2. Apoorva somani https://github.com/apurva999
+2. Apurva somani https://github.com/apurva999
 3. Shadman khan https://github.com/ShadmanKhan007
 4. Rahul Bankoti https://github.com/rahulbbbb
