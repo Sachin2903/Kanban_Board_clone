@@ -22,7 +22,7 @@ export function SubToDoList({idForMin}) {
       
       toast.success('One Added SuccessFully', {
         position: "bottom-center",
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -40,7 +40,7 @@ export function SubToDoList({idForMin}) {
 
       toast.error(' Add someThing !', {
         position: "top-center",
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -85,7 +85,7 @@ export function SubToDoList({idForMin}) {
       )}
       <ToastContainer
                     position="bottom-center"
-                    autoClose={2000}
+                    autoClose={1000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick

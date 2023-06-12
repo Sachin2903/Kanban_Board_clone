@@ -6,10 +6,10 @@ import user from "../../../image/man.png";
 import { Link } from "react-router-dom";
 
 export function Navbar({ backgrounds, onBackgroundClick }) {
-    
+
   const [showBackgroundList, setShowBackgroundList] = useState(false);
   const [selectedBackgroundIndex, setSelectedBackgroundIndex] = useState(0);
-  
+
 
   useEffect(() => {
     const storedBackgroundIndex = localStorage.getItem("selectedBackgroundIndex");
@@ -23,11 +23,11 @@ export function Navbar({ backgrounds, onBackgroundClick }) {
     onBackgroundClick(selectedBackgroundIndex);
   }, [selectedBackgroundIndex, onBackgroundClick]);
 
- function handleBackgroundClick(i) {
+  function handleBackgroundClick(i) {
     setSelectedBackgroundIndex(i);
   }
 
- 
+
 
   return (
     <div className={styles.navbar}>
@@ -44,8 +44,8 @@ export function Navbar({ backgrounds, onBackgroundClick }) {
       </div>
 
       <div className={styles.right}>
-      <Link to="/" className={styles.link} > <p className={styles.rightLi}>Home</p> </Link>
-        <p className={styles.rightLi} onClick={()=>setShowBackgroundList(!showBackgroundList)}>
+        <Link to="/" className={styles.link} > <p className={styles.rightLi}>Home</p> </Link>
+        <p className={styles.rightLi} onClick={() => setShowBackgroundList(!showBackgroundList)}>
           Change Background
         </p>
         <img src={user} alt="profile" className={styles.rightImg} />

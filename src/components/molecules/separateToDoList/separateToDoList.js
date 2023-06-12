@@ -88,7 +88,6 @@ export function SeparateToDoList({ titleForPlaceHolder, idOfComp, dustbinStatus 
                     }
 
                     {
-
                         arrayToBeMapInsideSeprateList.map((e, i) =>
                             <Draggable draggableId={e.idMin} index={i} key={e.idMin}>
                                 {(provided) => (

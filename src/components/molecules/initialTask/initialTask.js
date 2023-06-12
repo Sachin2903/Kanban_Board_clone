@@ -11,8 +11,7 @@ import { websiteTodoSlice } from "../../../slice/websiteTodoSlice";
 
 export function InitialTask() {
   const desForDragAndDrop = useDispatch();
-
-  const [showEditBox, setShowEditBox] = useState(false);
+  const [showEditBox, setShowEditBox] = useState(false); 
 
   const arrayToBeMap = useSelector((state, action) => {
     return state.toDoListData
@@ -48,7 +47,7 @@ export function InitialTask() {
     <Fragment>
       <div className={StyleSheet.bottomDivForList}>
         <DragDropContext onDragEnd={funToHandleDrapAndDrop}>
-          <Droppable droppableId="ROOT" type="groupm">
+          <Droppable droppableId="ROOT" type="group">
             {(provided) => (
               <div {...provided.droppableProps} ref={provided.innerRef} className={StyleSheet.bottomSecondDivForList}>
                 {/* map start parent*/

@@ -13,7 +13,6 @@ export function HeroPage() {
     "https://media.istockphoto.com/id/1355464383/photo/abstract-composition-with-connecting-dots-and-lines-blue-background-plexus-effect-big-data-3d.webp?b=1&s=170667a&w=0&k=20&c=tBzuzW1yQ4Oj7XHD10LSZ8oTM21nSIYBo3BLo7c2YGM=",
     "https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FsbXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
     "https://wallpaperaccess.com/full/4182676.jpg",
-    
   ];
 
   const [selectedBackground, setSelectedBackground] = useState(null);
