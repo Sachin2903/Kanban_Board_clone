@@ -58,7 +58,6 @@ export function InitialTask() {
 
                           <SeparateToDoList titleForPlaceHolder={e.taskTitle} key={i} idOfComp={e.id} dustbinStatus={e.trashStatus} />
 
-
                         </div>
                       )}
                     </Draggable>

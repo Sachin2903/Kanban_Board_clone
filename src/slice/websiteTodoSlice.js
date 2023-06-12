@@ -4,7 +4,6 @@ export const websiteTodoSlice = createSlice({
     initialState: [],
     name: "toDoListData",
     reducers: {
-
         //reducer to add a main list 
         addToDoList: ((state, action) => {
             const addedTodOListData = {
@@ -15,7 +14,6 @@ export const websiteTodoSlice = createSlice({
             }
             return [...state, addedTodOListData]
         }),
-
         // delete main list using filter
         DeleteMyToDoList: ((state, action) => {
             return state.filter((e) => {
@@ -136,6 +134,7 @@ export const websiteTodoSlice = createSlice({
             const [removeInRoot] = chnageIn.list.splice(action.payload.from, 1);
             chnageIn.list.splice(action.payload.to, 0, removeInRoot)
         }),
+        
         // change when in diff first take object from both and also add a activity
         changeWhenInDifferent: ((state, action) => {
             const changeInDiff = state.find((e) => {
