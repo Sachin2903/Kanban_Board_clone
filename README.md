@@ -9,9 +9,10 @@
 * Overall, the Kanban Board project using React will provide a powerful and flexible tool for students to manage their tasks and assignments effectively, helping them to stay organized and on top of their workload.
 
 
+# Deployment Site link
+Open https://648673bf01d60174d68be271--polite-froyo-3ac545.netlify.app/kanbanboard in your browser to view the application
 
-
-# Some Glimpses
+## Some Glimpses
 
 ![Kanban_Board (2)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/a6ebdc65-6f1f-40d7-99c8-7b5219e23b07)
 ![Kanban_Board (3)](https://github.com/Sachin2903/Kanban_Board_clone/assets/92660783/05283a28-b6a9-4447-a8d2-79cb7f777599)
@@ -28,6 +29,8 @@
 2. React Beautiful DND
 3. React Icons 
 4. React-Router-Dom
+5. React-Toastify
+6. react-uuid
 
 ## Collaborators:
 1. Sachin Chaturvedi https://github.com/Sachin2903
