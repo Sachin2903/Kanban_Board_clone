@@ -15,7 +15,7 @@ export function SecondStepTaskComp({ statePass, setStatePass }) {
    if(inputRef.current.value.trim().length<=0){
         toast.error(' Add someThing !', {
       position: "top-center",
-      autoClose: 2000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: false,
@@ -61,7 +61,7 @@ export function SecondStepTaskComp({ statePass, setStatePass }) {
       </div>
       <ToastContainer
         position="top-center"
-        autoClose={2000}
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
