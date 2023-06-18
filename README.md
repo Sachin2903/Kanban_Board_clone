@@ -1,4 +1,4 @@
-# Kanban Board Project: (using React)
+# Kanban Board Project: (Using React)
 
 * The Kanban Board is a visual tool that helps to manage work efficiently and effectively by visualizing the workflow and providing a clear picture of the status of each task
 
