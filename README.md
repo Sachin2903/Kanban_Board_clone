@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to kanban_board-website 👋</h1>
+<h1 align="center">Welcome to kanban_board 👋</h1>
 
 
 
