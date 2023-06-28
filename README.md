@@ -28,7 +28,7 @@ Open https://648673bf01d60174d68be271--polite-froyo-3ac545.netlify.app/kanbanboa
 
 
 
-## others Libraries used in this project:
+## Libraries used in this project:
 1. React-Redux
 2. React Beautiful DND
 3. React Icons 
